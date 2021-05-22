@@ -8,8 +8,10 @@ This repository contains snippets of code, and some simple tests for them, that 
 - `ranchu` - for Android VMs
     - `rtc` - precise real time (unaffected by VM RTC)
     - `unicopy` - read kernel information and access kernel / physical RAM of the VM
+    - `conslog` - echo standard input to VM console
 - `ios` - for iOS VMs (**note:** Makefile is for Darwin cross-tools)
     - `rtc` - precise real time (unaffected by VM RTC)
     - `unicopy` - read kernel information and access kernel / physical RAM of the VM
+    - `conslog` - echo standard input to VM console
 
 More information is available at [Corellium Knowledge Base](https://support.corellium.com/hc/en-us).

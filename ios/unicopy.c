@@ -1,16 +1,22 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#define UNICOPY_DST_USER     0
-#define UNICOPY_DST_KERN     1
-#define UNICOPY_DST_PHYS     2
-#define UNICOPY_SRC_USER     0
-#define UNICOPY_SRC_KERN     4
-#define UNICOPY_SRC_PHYS     8
+#define UNICOPY_DST_USER        0
+#define UNICOPY_DST_KERN        1
+#define UNICOPY_DST_PHYS        2
+#define UNICOPY_SRC_USER        0
+#define UNICOPY_SRC_KERN        4
+#define UNICOPY_SRC_PHYS        8
 size_t unicopy(unsigned mode, uintptr_t dst, uintptr_t src, size_t size);
 
-#define KERN_INFO_VA         0
-#define KERN_INFO_PA         1
+#define KERN_INFO_VA            0
+#define KERN_INFO_PA            1
+#define KERN_INFO_TPIDR_EL1     0x40
+#define KERN_INFO_TTBR0_EL1     0x41
+#define KERN_INFO_TTBR1_EL1     0x42
+#define KERN_INFO_TCR_EL1       0x43
+#define KERN_INFO_VBAR_EL1      0x44
+#define KERN_INFO_CONTEXTIDR_EL1 0x45
 uintptr_t get_kern_info(unsigned key);
 
 int main(void)

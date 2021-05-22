@@ -1,0 +1,5 @@
+*.o
+*.local
+conslog
+rtc
+unicopy

@@ -16,11 +16,12 @@ CFLAGS   ?= -O2 -Wall -Wcast-qual -Wextra -Wpointer-arith -Wshadow -Wstrict-prot
 LDFLAGS  ?=
 
 .PHONY: all
-all: rtc unicopy
+all: rtc unicopy conslog
 
 .PHONY: clean
 clean:
-	/bin/rm rtc unicopy rtc.o rtc-op.o unicopy.o unicopy-op.o
+	/bin/rm rtc unicopy conslog rtc.o rtc-op.o unicopy.o unicopy-op.o conslog.o conslog-op.o
 
 rtc: rtc.o rtc-op.o
 unicopy: unicopy.o unicopy-op.o
+conslog: conslog.o conslog-op.o
